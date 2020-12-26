@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,7 +16,15 @@ public class PlayerController : MonoBehaviour
         health = 5;
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        if (health == 0)
+        {
+            Debug.Log("Game Over!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
     void FixedUpdate()
     {
         if (Input.GetKey("d") || Input.GetKey("right"))
