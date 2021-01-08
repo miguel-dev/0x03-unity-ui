@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public int health;
     public Text scoreText;
     public Text healthText;
+    public Text winLoseText;
+    public Image winLoseBG;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +65,10 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.tag == "Goal")
         {
-            Debug.Log("You win!");
+            winLoseBG.gameObject.SetActive(true);
+            winLoseText.text = "You Win!";
+            winLoseText.color = Color.black;
+            winLoseBG.color = Color.green;
         }
     }
 
