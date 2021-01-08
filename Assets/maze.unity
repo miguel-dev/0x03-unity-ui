@@ -2182,6 +2182,7 @@ MonoBehaviour:
   rigidBody: {fileID: 515110844}
   health: 0
   scoreText: {fileID: 1322151295}
+  healthText: {fileID: 709218755}
 --- !u!4 &533495883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 334758406311676471, guid: 875e6d89d5296a7419b68c54f5882a8c,
