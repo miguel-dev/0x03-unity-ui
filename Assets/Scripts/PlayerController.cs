@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
             winLoseBG.color = Color.red;
             StartCoroutine(LoadScene(3));
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menu");
+        }
     }
 
     void FixedUpdate()
